@@ -75,15 +75,14 @@ DATASTRUCTURES-ALGORITHMS/
 │   ├── 01 Asymptotic Analysis/
 │   ├── 02 Asymptotic symbols O (Big O), Ω (Omega), Θ (Theta)/
 │   ├── 03 A brief overview of OOP/
-│   ├── C++ Documents/
-│   ├── Python Documents/
-│   └── Theory Documents/
+|
 ├── 01 Basic Data Structures/
 │   ├── 00 Array/
 │   ├── 01 Linked List/
 │   ├── 02 Stack/
 │   ├── 03 Queue/
 │   └── 04 Lists/
+|
 ├── 02 Trees/
 │   ├── 00 Basic tree concepts/
 │   ├── 01 Binary Tree/
@@ -97,16 +96,19 @@ DATASTRUCTURES-ALGORITHMS/
 │       ├── 00 AVL/
 │       ├── 01 Red-Black Tree/
 │       └── 02 N-ary Trees/
+|
 ├── 03 Heap/
 │   ├── 00 Min-Heap/
 │   ├── 01 Max-Heap/
 │   └── 02 Heap Sort/
+|
 ├── 04 Hashing/
 │   ├── 00 Hash Function/
 │   └── 01 Collision Resolution/
 │       ├── 00 Open Addressing/
 │       ├── 01 Separate Chaining/
 │       └── 02 Hash Table/
+|
 ├── 05 Graphs/
 │   ├── 00 Basic graph concepts/
 │   ├── 01 Graph display methods/
@@ -122,6 +124,7 @@ DATASTRUCTURES-ALGORITHMS/
 │       ├── 03 Minimum Spanning Tree - MST/
 │       ├── 04 Prim/
 │       └── 05 Topological Sort/
+|
 ├── 06 Sorting Algorithms/
 │   ├── 00 Bubble Sort/
 │   ├── 01 Insertion Sort/
@@ -129,8 +132,10 @@ DATASTRUCTURES-ALGORITHMS/
 │   ├── 03 Merge Sort/
 │   ├── 04 Quick Sort/
 │   └── 05 Radix Sort/
+|
 ├── 07 Divide and Conquer/
 │   └── 00 Assen/
+|
 ├── 08 Dynamic Programming/
 │   ├── 00 Optimal Substructure/
 │   ├── 01 Overlapping Subproblems/
@@ -144,16 +149,19 @@ DATASTRUCTURES-ALGORITHMS/
 │       ├── 02 Matrix Chain Multiplication/
 │       ├── 03 Longest Common Subsequence - LCS/
 │       └── 04 Floyd-Warshall Algorithm/
+|
 ├── 09 Greedy Algorithms/
 │   ├── 00 The concept of greedy choice and ownership of optimal choice/
 │   ├── 01 Difference from dynamic programming/
 │   └── 02 Classic examples/
 │       └── Huffman Coding/
+|
 ├── 10 String Algorithms/
 │   └── 00 Pattern Matching/
 │       ├── 00 Naive/
 │       ├── 01 Knuth Morris Pratt - KMP/
 │       └── 02 Rabin-Karp/
+|
 ├── 11 NP-Complete/
 │   ├── 00 Concept of optimization and decision problems/
 │   ├── 01 Complexity classes P, NP, NP-Hard, NP-Complete/
@@ -165,11 +173,13 @@ DATASTRUCTURES-ALGORITHMS/
 │   └── 04 Ways to deal with difficult problems/
 │       ├── 00 Approximation Algorithms/
 │       └── 01 Heuristics/
+|
 ├── 12 Other Advanced Topics/
 │   ├── 00 Convex Hull/
 │   ├── 01 Randomized Algorithms/
 │   ├── 02 Multithreaded Algorithms/
 │   └── 03 Streaming Algorithms/
+|
 ├── 13 AI Algorithms/
 │   ├── 00 Search Algorithms/
 │   │   ├── 00 Uninformed Search/
@@ -187,34 +197,42 @@ DATASTRUCTURES-ALGORITHMS/
 │   │       ├── 01 Simulated Annealing/
 │   │       ├── 03 Genetic Algorithm/
 │   │       └── 04 Beam Search/
+|   |
 │   ├── 01 Game Playing/
 │   │   ├── 00 Minimax Algorithm/
 │   │   └── 01 Alpha-Beta Pruning/
+|   |
 │   ├── 02 Reasoning Algorithms/
 │   │   ├── 00 Forward Chaining/
 │   │   ├── 01 Backward Chaining/
 │   │   └── 02 Resolution Algorithm/
+|   |
 │   ├── 03 Machine Learning/
 │   │   ├── 00 Decision Tree Learning/
 │   │   ├── 01 K-Nearest Neighbors - KNN/
 │   │   ├── 02 Naive Bayes Classifier/
 │   │   └── 03 k-Means Clustering/
+|   |
 │   └── 04 Probabilistic Algorithms/
 │       ├── 00 Bayesian Inference/
-│       ├── 01 Variable Elimination/
+│       ├── 01 Variable Elimination/    
 │       └── 02 Sampling Methods/
+|
 └── 14 Expert System Algorithms/
     ├── 00 Inference Algorithms/
     │   └── 00 Rete Algorithm/
+    |
     ├── 01 Uncertainty Management/
     │   ├── 00 Certainty Factors/
     │   ├── 01 Bayesian Belief Networks/
     │   ├── 02 Dempster-Shafer Theory/
     │   └── 03 Fuzzy Logic Algorithms/
+    |
     ├── 02 Case-Based Reasoning/
     │   ├── Case Adaptation Algorithms/
     │   ├── Case Retrieval Algorithms/
     │   └── CBR for KNN/
+    |
     └── 03 Optimization algorithms/
         ├── 00 Genetic Algorithms/
         └── 01 Particle Swarm Optimization/
