@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Edit README.md">
+    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add folders">
+      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner_old.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Installs.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +39,9 @@
     &quot;accountId&quot;: &quot;a1336cb6-2987-44a0-bc88-da81b7a738dc&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -35,20 +50,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.cpp_runner.executor": "Run",
+    "Python.ins.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/DataStructures-Algorithms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DataStructures-Algorithms\" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DataStructures-Algorithms\00 Library" />
+      <recent name="E:\DataStructures-Algorithms\00_Library" />
+      <recent name="E:\DataStructures-Algorithms" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="Autodetect">
       <module name="Data_Structure_Bashiri" />
@@ -106,6 +135,12 @@
       <workItem from="1760868974542" duration="680000" />
       <workItem from="1760870280466" duration="1000" />
       <workItem from="1760870574942" duration="17000" />
+      <workItem from="1760870689173" duration="1088000" />
+      <workItem from="1761057804475" duration="22000" />
+      <workItem from="1761167192742" duration="9000" />
+      <workItem from="1761289355337" duration="5203000" />
+      <workItem from="1761295697706" duration="2005000" />
+      <workItem from="1761297719814" duration="414000" />
     </task>
     <task id="LOCAL-00001" summary="Edit README.md">
       <option name="closed" value="true" />
@@ -115,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760869632255</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add folders">
+      <option name="closed" value="true" />
+      <created>1760870743766</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760870743766</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add folders">
+      <option name="closed" value="true" />
+      <created>1760870774740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760870774740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +174,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edit README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit README.md" />
+    <MESSAGE value="Add folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add folders" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$cpp_runner.coverage" NAME="cpp_runner Coverage Results" MODIFIED="1761297553398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00_Library" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$ins.coverage" NAME="ins Coverage Results" MODIFIED="1761295092935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
