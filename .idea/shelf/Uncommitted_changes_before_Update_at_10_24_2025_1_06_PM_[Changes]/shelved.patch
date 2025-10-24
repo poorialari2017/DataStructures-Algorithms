@@ -1,0 +1,209 @@
+Index: _Library/cpp_runner_old.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/_Library/cpp_runner_old.py b/_Library/cpp_runner_old.py
+new file mode 100644
+--- /dev/null	(date 1761297936070)
++++ b/_Library/cpp_runner_old.py	(date 1761297936070)
+@@ -0,0 +1,100 @@
++# cpp_runner.py
++import subprocess
++import sys
++import os
++import tempfile
++
++
++class CppRunner:
++    def __init__(self):
++        self.compilers = ['g++', 'gcc', 'clang++', 'c++']
++        self.found_compiler = self._find_compiler()
++
++    def _find_compiler(self):
++        """Find available C++ compiler"""
++        for compiler in self.compilers:
++            try:
++                result = subprocess.run([compiler, '--version'],
++                                        capture_output=True, text=True, timeout=5)
++                if result.returncode == 0:
++                    print(f"✅ Found compiler: {compiler}")
++                    return compiler
++            except:
++                continue
++        return None
++
++    def run_cpp_code(self, cpp_code, output_filename="output"):
++        """Compile and run C++ code"""
++        if not self.found_compiler:
++            print("❌ No C++ compiler found!")
++            return False
++
++        try:
++            # Create temporary file
++            with open(f'{output_filename}.cpp', 'w', encoding='utf-8') as f:
++                f.write(cpp_code)
++
++            print("📝 C++ file created")
++
++            # Compile
++            print("🔨 Compiling C++ code...")
++            compile_cmd = [self.found_compiler, f'{output_filename}.cpp', '-o', output_filename]
++            if sys.platform == 'win32':
++                compile_cmd[-1] = f'{output_filename}.exe'
++
++            compile_result = subprocess.run(compile_cmd, capture_output=True, text=True)
++
++            if compile_result.returncode == 0:
++                print("✅ Compilation successful!")
++
++                # Run
++                print("🚀 Running C++ program...")
++                run_cmd = [f'./{output_filename}']
++                if sys.platform == 'win32':
++                    run_cmd = [f'{output_filename}.exe']
++
++                run_result = subprocess.run(run_cmd, capture_output=True, text=True)
++
++                print("=" * 50)
++                print("C++ PROGRAM OUTPUT:")
++                print("=" * 50)
++                print(run_result.stdout)
++                if run_result.stderr:
++                    print("STDERR:", run_result.stderr)
++                print("=" * 50)
++
++                return True
++            else:
++                print("❌ Compilation failed!")
++                print("Error:", compile_result.stderr)
++                return False
++
++        except Exception as e:
++            print(f"❌ Error: {e}")
++            return False
++        finally:
++            # Cleanup
++            self._cleanup(output_filename)
++
++    def _cleanup(self, filename):
++        """Clean up temporary files"""
++        files_to_remove = [
++            f'{filename}.cpp',
++            f'{filename}',
++            f'{filename}.exe'
++        ]
++
++        for file in files_to_remove:
++            if os.path.exists(file):
++                os.remove(file)
++                print(f"🧹 Cleaned up: {file}")
++
++
++# Create global instance
++cpp_runner = CppRunner()
++
++
++# Simple function for quick usage
++def run_cpp(cpp_code, output_name="output"):
++    """Quick function to run C++ code"""
++    return cpp_runner.run_cpp_code(cpp_code, output_name)
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"50914139-8244-4ba1-b316-4a21ef6d4f7d\" name=\"Changes\" comment=\"Add folders\">\r\n      <change afterPath=\"$PROJECT_DIR$/00 Library/cpp_runner.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/00 Library/cpp_runner_old.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Installs.ipynb\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Jupyter Notebook\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;poorialari2017&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/poorialari2017/DataStructures-Algorithms.git&quot;,\r\n    &quot;accountId&quot;: &quot;a1336cb6-2987-44a0-bc88-da81b7a738dc&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"34EyRaWWxf4klMTha53JKWjctKt\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.cpp_runner.executor\": \"Run\",\r\n    \"Python.ins.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"E:/DataStructures-Algorithms\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\DataStructures-Algorithms\\\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\DataStructures-Algorithms\\00 Library\" />\r\n      <recent name=\"E:\\DataStructures-Algorithms\\00_Library\" />\r\n      <recent name=\"E:\\DataStructures-Algorithms\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"tests\" factoryName=\"Autodetect\">\r\n      <module name=\"Data_Structure_Bashiri\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_target\" value=\"&quot;&quot;\" />\r\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"tests\" factoryName=\"Doctests\">\r\n      <module name=\"Data_Structure_Bashiri\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"\" />\r\n      <option name=\"CLASS_NAME\" value=\"\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"FOLDER_NAME\" value=\"\" />\r\n      <option name=\"TEST_TYPE\" value=\"TEST_SCRIPT\" />\r\n      <option name=\"PATTERN\" value=\"\" />\r\n      <option name=\"USE_PATTERN\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90\" />\r\n        <option value=\"bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"50914139-8244-4ba1-b316-4a21ef6d4f7d\" name=\"Changes\" comment=\"\" />\r\n      <created>1760793019159</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1760793019159</updated>\r\n      <workItem from=\"1760793020401\" duration=\"213000\" />\r\n      <workItem from=\"1760868974542\" duration=\"680000\" />\r\n      <workItem from=\"1760870280466\" duration=\"1000\" />\r\n      <workItem from=\"1760870574942\" duration=\"17000\" />\r\n      <workItem from=\"1760870689173\" duration=\"1088000\" />\r\n      <workItem from=\"1761057804475\" duration=\"22000\" />\r\n      <workItem from=\"1761167192742\" duration=\"9000\" />\r\n      <workItem from=\"1761289355337\" duration=\"5203000\" />\r\n      <workItem from=\"1761295697706\" duration=\"2005000\" />\r\n      <workItem from=\"1761297719814\" duration=\"414000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Edit README.md\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1760869632255</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1760869632255</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add folders\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1760870743766</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1760870743766</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add folders\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1760870774740</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1760870774740</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Edit README.md\" />\r\n    <MESSAGE value=\"Add folders\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Add folders\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/DataStructures_Algorithms$cpp_runner.coverage\" NAME=\"cpp_runner Coverage Results\" MODIFIED=\"1761297553398\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/00_Library\" />\r\n    <SUITE FILE_PATH=\"coverage/DataStructures_Algorithms$ins.coverage\" NAME=\"ins Coverage Results\" MODIFIED=\"1761295092935\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 202fe8dca48ee3b5c783fac26c3926f51f296882)
++++ b/.idea/workspace.xml	(date 1761298500538)
+@@ -4,12 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add folders">
+-      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner_old.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Installs.ipynb" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add CPP runner and Array doc">
++      <change afterPath="$PROJECT_DIR$/_Library/cpp_runner_old.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -140,7 +136,7 @@
+       <workItem from="1761167192742" duration="9000" />
+       <workItem from="1761289355337" duration="5203000" />
+       <workItem from="1761295697706" duration="2005000" />
+-      <workItem from="1761297719814" duration="414000" />
++      <workItem from="1761297719814" duration="778000" />
+     </task>
+     <task id="LOCAL-00001" summary="Edit README.md">
+       <option name="closed" value="true" />
+@@ -166,16 +162,61 @@
+       <option name="project" value="LOCAL" />
+       <updated>1760870774740</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Add folders">
++      <option name="closed" value="true" />
++      <created>1761298412167</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1761298412167</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Add folders">
++      <option name="closed" value="true" />
++      <created>1761298453514</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1761298453514</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Add CPP runner and Array doc">
++      <option name="closed" value="true" />
++      <created>1761298479613</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1761298479613</updated>
++    </task>
++    <task id="LOCAL-00007" summary="Add CPP runner and Array doc">
++      <option name="closed" value="true" />
++      <created>1761298498404</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1761298498404</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Edit README.md" />
++    <MESSAGE value="Add cpp runner&#10;and array file" />
+     <MESSAGE value="Add folders" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Add folders" />
++    <MESSAGE value="Add CPP runner and Array doc" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add CPP runner and Array doc" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/DataStructures_Algorithms$cpp_runner.coverage" NAME="cpp_runner Coverage Results" MODIFIED="1761297553398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00_Library" />
