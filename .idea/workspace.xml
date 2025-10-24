@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add CPP runner and Array doc">
+    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Array doc">
       <change afterPath="$PROJECT_DIR$/_Library/cpp_runner_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,24 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.cpp_runner.executor": "Run",
-    "Python.ins.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/DataStructures-Algorithms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.cpp_runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ins.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/DataStructures-Algorithms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\DataStructures-Algorithms\" />
@@ -136,7 +139,10 @@
       <workItem from="1761167192742" duration="9000" />
       <workItem from="1761289355337" duration="5203000" />
       <workItem from="1761295697706" duration="2005000" />
-      <workItem from="1761297719814" duration="778000" />
+      <workItem from="1761297719814" duration="6616000" />
+      <workItem from="1761304697495" duration="2000" />
+      <workItem from="1761308974463" duration="11609000" />
+      <workItem from="1761336327913" duration="5275000" />
     </task>
     <task id="LOCAL-00001" summary="Edit README.md">
       <option name="closed" value="true" />
@@ -194,7 +200,71 @@
       <option name="project" value="LOCAL" />
       <updated>1761298498404</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add CPP runner and Array doc">
+      <option name="closed" value="true" />
+      <created>1761298719232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761298719232</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761300158812</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761300158812</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761304128003</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761304128003</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761304276979</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761304276979</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761304380976</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761304380976</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761323634261</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761323634261</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761336336604</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761336336604</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761336391453</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1761336391453</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +286,8 @@
     <MESSAGE value="Add cpp runner&#10;and array file" />
     <MESSAGE value="Add folders" />
     <MESSAGE value="Add CPP runner and Array doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add CPP runner and Array doc" />
+    <MESSAGE value="Array doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Array doc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DataStructures_Algorithms$cpp_runner.coverage" NAME="cpp_runner Coverage Results" MODIFIED="1761297553398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00_Library" />
