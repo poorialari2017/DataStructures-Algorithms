@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add folders">
-      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/00 Library/cpp_runner_old.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/00 Array doc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Installs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Add CPP runner and Array doc">
+      <change afterPath="$PROJECT_DIR$/_Library/cpp_runner_old.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +136,7 @@
       <workItem from="1761167192742" duration="9000" />
       <workItem from="1761289355337" duration="5203000" />
       <workItem from="1761295697706" duration="2005000" />
-      <workItem from="1761297719814" duration="414000" />
+      <workItem from="1761297719814" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="Edit README.md">
       <option name="closed" value="true" />
@@ -166,16 +162,61 @@
       <option name="project" value="LOCAL" />
       <updated>1760870774740</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add folders">
+      <option name="closed" value="true" />
+      <created>1761298412167</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761298412167</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add folders">
+      <option name="closed" value="true" />
+      <created>1761298453514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761298453514</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add CPP runner and Array doc">
+      <option name="closed" value="true" />
+      <created>1761298479613</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761298479613</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add CPP runner and Array doc">
+      <option name="closed" value="true" />
+      <created>1761298498404</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761298498404</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edit README.md" />
+    <MESSAGE value="Add cpp runner&#10;and array file" />
     <MESSAGE value="Add folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add folders" />
+    <MESSAGE value="Add CPP runner and Array doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add CPP runner and Array doc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DataStructures_Algorithms$cpp_runner.coverage" NAME="cpp_runner Coverage Results" MODIFIED="1761297553398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00_Library" />
