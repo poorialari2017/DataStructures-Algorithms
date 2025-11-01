@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Array doc" />
+    <list default="true" id="50914139-8244-4ba1-b316-4a21ef6d4f7d" name="Changes" comment="Array doc">
+      <change afterPath="$PROJECT_DIR$/01 Basic Data Structures/02 Stack/00 Stack doc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01 Basic Data Structures/04 Lists/00 List doc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Style/auto_font.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_24_2025_1_06_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01 Basic Data Structures/00 Array/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01 Basic Data Structures/02 Stack/.gitkeep" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
         <option value="Jupyter Notebook" />
       </list>
@@ -46,8 +55,16 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.00 Array doc.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auto_farsi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auto_font.executor&quot;: &quot;Run&quot;,
+    &quot;Python.code_style.executor&quot;: &quot;Run&quot;,
     &quot;Python.cpp_runner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.farsi_style.executor&quot;: &quot;Run&quot;,
+    &quot;Python.final_font.executor&quot;: &quot;Run&quot;,
     &quot;Python.ins.executor&quot;: &quot;Run&quot;,
+    &quot;Python.markdown_processor.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -68,12 +85,36 @@
       <recent name="E:\DataStructures-Algorithms\" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DataStructures-Algorithms\_Style" />
       <recent name="E:\DataStructures-Algorithms\00 Library" />
       <recent name="E:\DataStructures-Algorithms\00_Library" />
       <recent name="E:\DataStructures-Algorithms" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="farsi_style" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures-Algorithms" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/_Style" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_Style/farsi_style.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Autodetect">
       <module name="Data_Structure_Bashiri" />
       <option name="ENV_FILES" value="" />
@@ -110,6 +151,11 @@
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.farsi_style" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -138,7 +184,15 @@
       <workItem from="1761297719814" duration="6616000" />
       <workItem from="1761304697495" duration="2000" />
       <workItem from="1761308974463" duration="11609000" />
-      <workItem from="1761336327913" duration="5622000" />
+      <workItem from="1761336327913" duration="7199000" />
+      <workItem from="1761371981010" duration="607000" />
+      <workItem from="1761381711617" duration="7261000" />
+      <workItem from="1761575762611" duration="2000" />
+      <workItem from="1761575886093" duration="1016000" />
+      <workItem from="1761897753882" duration="7161000" />
+      <workItem from="1761919233816" duration="8170000" />
+      <workItem from="1761927453673" duration="859000" />
+      <workItem from="1761928324391" duration="3113000" />
     </task>
     <task id="LOCAL-00001" summary="Edit README.md">
       <option name="closed" value="true" />
@@ -268,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761343267443</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Array doc">
+      <option name="closed" value="true" />
+      <created>1761344298180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1761344298180</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +356,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="Array doc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$auto_farsi.coverage" NAME="auto_farsi Coverage Results" MODIFIED="1761925705013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
     <SUITE FILE_PATH="coverage/DataStructures_Algorithms$cpp_runner.coverage" NAME="cpp_runner Coverage Results" MODIFIED="1761297553398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/00_Library" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$final_font.coverage" NAME="final_font Coverage Results" MODIFIED="1761928091368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$auto_font.coverage" NAME="auto_font Coverage Results" MODIFIED="1761928296533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$code_style.coverage" NAME="code_style Coverage Results" MODIFIED="1761922818990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$farsi_style.coverage" NAME="farsi_style Coverage Results" MODIFIED="1761925540563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
+    <SUITE FILE_PATH="coverage/DataStructures_Algorithms$markdown_processor.coverage" NAME="markdown_processor Coverage Results" MODIFIED="1761923717852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/_Style" />
     <SUITE FILE_PATH="coverage/DataStructures_Algorithms$ins.coverage" NAME="ins Coverage Results" MODIFIED="1761295092935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
